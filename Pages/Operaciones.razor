@@ -1,0 +1,43 @@
+﻿@page "/Operaciones"
+
+
+<h1> Operaciones </h1>
+<p></p>
+<h3>Se realizaran las siguientes operaciones suma, multiplicacion y resta</h3>
+<div>
+    
+        <label> Primer numero</label>
+        <input @bind="Nu1" />
+    
+    
+        <label> Segundo numero</label>
+        <input @bind="Nu2" />
+    
+    <div>
+        <button class="btn btn-primary" @onclick="operaciones"> Calcular </button>
+    </div>
+    <div>
+        <p> La suma es @suma</p>
+        <p> La multiplicacion es @multiplicacion</p>
+        <p> La resta es @resta</p>
+    </div>
+</div>
+
+@code {
+    public float Nu1 { get; set; }
+    public float Nu2 { get; set; }
+    public float suma, resta, multiplicacion;
+
+    private void operaciones() {
+
+        Math.Round(suma = Nu1 + Nu2);
+        Math.Round(multiplicacion = Nu1 * Nu2);
+        Math.Round(resta = Nu1 - Nu2);
+    }
+
+
+
+
+
+
+}
